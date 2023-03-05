@@ -1,0 +1,62 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"plugin:security/recommended",
+		"plugin:@microsoft/sdl/common",
+		"plugin:@microsoft/sdl/node"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"prettier",
+		"import",
+		"@microsoft/sdl",
+		"security"
+	],
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			"node": {},
+			"typescript": {
+				"project": "./tsconfig.json",
+				"alwaysTryTypes": true
+			}
+		}
+	},
+	"rules": {
+		"@typescript-eslint/ban-ts-comment": [
+			"error",
+			{
+				"ts-expect-error": "allow-with-description",
+				"ts-ignore": "allow-with-description",
+				"ts-nocheck": true,
+				"ts-check": false
+			}
+		],
+		"@typescript-eslint/ban-types": ["off"],
+		"@typescript-eslint/explicit-function-return-type": "warn",
+		"@typescript-eslint/no-explicit-any": ["warn"],
+		"@typescript-eslint/no-unused-vars": "error",
+		"@typescript-eslint/no-use-before-define": ["warn"],
+		"@typescript-eslint/prefer-optional-chain": "error",
+		"prettier/prettier": "error",
+		"@typescript-eslint/no-require-imports": ["error"],
+		"import/no-unresolved": ["error"],
+		"import/order": [
+			"warn",
+			{
+				"groups": ["builtin", "external"],
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		],
+		"no-duplicate-imports": ["error"]
+	}
+}

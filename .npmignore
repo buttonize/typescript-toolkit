@@ -1,0 +1,7 @@
+*
+!lib/*
+!README.md
+!LICENSE
+!package.json
+!src/*
+lib/tsconfig.tsbuildinfo
