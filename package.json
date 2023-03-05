@@ -19,13 +19,15 @@
 		"test": "vitest --coverage",
 		"test:watch": "vitest --watch --coverage"
 	},
+	"peerDependencies": {
+		"@types/aws-lambda": "8.x"
+	},
 	"devDependencies": {
 		"@commitlint/cli": "^16.0.0",
 		"@commitlint/config-conventional": "^16.0.0",
 		"@microsoft/eslint-plugin-sdl": "^0.2.0",
 		"@tsconfig/node18": "^1.0.1",
-		"@types/aws-lambda": "^8.10.109",
-		"@types/node": "^14",
+		"@types/node": "^18",
 		"@typescript-eslint/eslint-plugin": "^5",
 		"@typescript-eslint/parser": "^5",
 		"@vitest/coverage-c8": "~0.28.5",
@@ -42,7 +44,8 @@
 		"semantic-release": "^20.1.1",
 		"standard-version": "^9",
 		"typescript": "^4.5.5",
-		"vitest": "~0.28.5"
+		"vitest": "~0.28.5",
+		"@types/aws-lambda": "^8.10.111"
 	},
 	"lint-staged": {
 		"*.{ts,js}": "eslint --fix"
